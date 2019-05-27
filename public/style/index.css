@@ -1,0 +1,31 @@
+*{border: 1px solid blue;}
+
+body {font-size: 13px;}
+
+.outer_container_width { /* width of outer containers//conteents next to body frame/borders */
+	
+	width: auto;
+	min-width: 320px;
+}
+
+
+
+
+
+
+/* break points 
+
+#buttons_on_search_main_container{//as code name says, it wat it is
+	position:relative;
+	top:-12vh;
+	right: -72vw"
+	font-size: 45px;
+}
+
+
+
+
+
+
+
+*/
