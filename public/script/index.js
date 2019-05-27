@@ -21,54 +21,35 @@
 ===============================================*/
 
 /*------------------------------------ top menu hide/show ---------------------------------*/
-var is_top_menu_hidden = false;
 
-function main_body_onfocus_top_menu_hide (){//ide and set timout to show top menu
-	
+//when activity on page ads div 
 
-	
-	//hide top menu
-	document.getElementById('control_panel_main_contaier').style.display='none';
-	
-	
-	//change body content container top margin
-	
-	x ();
-	
+document.getElementById("main_body_contents_outer_container").onmouseover = function() {	
+  hide_or_show_header_menu ('hide');
+};
 
+function hide_or_show_header_menu (id){
 	
-	is_top_menu_hidden = false;
-	
-}
-
-
-
-function x (){
-	
-	if(is_top_menu_hidden){return;}
-	
-	setTimeout(function(){//restore appearance after time, if no activity from user
-	//show top menu
+	if(id=='hide'){
+	   
+	    document.getElementById('control_panel_main_contaier').style.display='none';
+	    document.getElementById('menu_bar_show_image').style.display='block';
 		
-	document.getElementById('control_panel_main_contaier').style.display='block';
+		//call placeholder changer button//incase stopped//cause input was filled//or stop loop if input filled
+		change_search_input_placeholder_text();
+	   }
 	
-	is_top_menu_hidden =true;
-	
-},6000);
+	if(id=='show'){
+	   
+	    document.getElementById('control_panel_main_contaier').style.display='block';
+	    document.getElementById('menu_bar_show_image').style.display='none';
+		
+		//call placeholder changer button//incase stopped//cause input was filled//or stop loop if input filled
+		change_search_input_placeholder_text();
+
+	   }
 	
 }
-
-
-
-//detect activity on page
-
-document.addEventListener('keydown',main_body_onfocus_top_menu_hide);
-document.addEventListener('keyup',main_body_onfocus_top_menu_hide);
-document.addEventListener('mousedown',main_body_onfocus_top_menu_hide);
-document.addEventListener('mouseup',main_body_onfocus_top_menu_hide);
-document.addEventListener('mousemove',main_body_onfocus_top_menu_hide);
-
-
 
 
 
@@ -83,7 +64,8 @@ document.addEventListener('mousemove',main_body_onfocus_top_menu_hide);
 
 //search box placeholder text
 var current_search_placeholder_text = 0;
-
+//place holder changer loop
+var search_input_placeholder_change_interval;
 
 function change_search_input_placeholder_text(){
 	
@@ -93,7 +75,11 @@ function change_search_input_placeholder_text(){
 	
 	var search_input_placeholder_change_interval = setInterval(
 	function(){
-		
+		//if serach bar is filled dont allow placeholder change//en stop interval
+		if(document.getElementById('search_box_input').value.length > 0){
+			clearInterval(search_input_placeholder_change_interval);	
+			return;
+		}
 		document.getElementById('search_box_input').placeholder = search_placeholder_text_array[ current_search_placeholder_text +=1 ];//increase //then return text from array
 		
 		if(current_search_placeholder_text + 1 == search_placeholder_text_array.length){//reset loop//when array end reached
@@ -108,3 +94,11 @@ function change_search_input_placeholder_text(){
 
 change_search_input_placeholder_text();//start array changer
 
+
+/* features */
+
+//add trending keywords bar, used for quick browsing//almost like serach but its automated
+//allow search for related selected product items//ie// products that contains keyword like the product//make somewhat strict
+//allow ability to rate ads as good or bad, if good it gets higher showing in its search or recommendation pane
+//allow advertisers to add discount codes/coupons
+//allow link to store
