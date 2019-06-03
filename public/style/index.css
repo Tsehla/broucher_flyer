@@ -1,6 +1,6 @@
 {border: 1px solid blue;}
 
-body {font-size: 13px;}
+body {font-size: 35px;}
 
 .outer_container_width { /* width of outer containers//conteents next to body frame/borders */
 	
@@ -12,7 +12,9 @@ body {font-size: 13px;}
 }
 
 
-
+#search_box_input::placeholder{
+	font-size: 55px;
+}
 
 
 
