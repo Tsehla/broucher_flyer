@@ -33,6 +33,7 @@ function hide_or_show_header_menu (id){
 	if(id=='hide'){
 	   
 	    document.getElementById('control_panel_main_contaier').style.display='none';
+	    document.getElementById('body_top_spacer_when_menu').style.display='none';//move content up
 	    document.getElementById('menu_bar_show_image').style.display='block';
 		
 		//call placeholder changer button//incase stopped//cause input was filled//or stop loop if input filled
@@ -41,6 +42,7 @@ function hide_or_show_header_menu (id){
 	
 	if(id=='show'){
 	   
+	    document.getElementById('body_top_spacer_when_menu').style.display='block';//push content down
 	    document.getElementById('control_panel_main_contaier').style.display='block';
 	    document.getElementById('menu_bar_show_image').style.display='none';
 		
