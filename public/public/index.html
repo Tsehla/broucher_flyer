@@ -1,0 +1,85 @@
+<html>
+
+	<head>
+		<title>BarMine</title>
+		
+		
+		<!-- link stle -->
+		<link rel="stylesheet" href="style/bootstrap.min.css"> <!-- bootstrap -->
+		<link rel="stylesheet" href="style/w3.css"><!-- w3 css -->
+		<link rel="stylesheet" href="style/line-awesome/css/line-awesome.css"><!--  line awesome-->
+		<link rel="stylesheet" href="style/index.css"><!-- app style  -->
+		
+	</head>
+
+	<body id='body_main'>
+		
+		<!-- header/control panel container -->
+		<div id='control_panel_main_contaier' class='w3-margin w3-block outer_container_width' style='height:27vh;min-height: 155px;position: fixed;top:0px;left: 0px;width: 95vw;background-color: black'>
+		
+			<!-- menu bar top -->
+			<div id='menu_bar_container' style='width: 100%;height:5vh;min-height: 30px;text-align: center'>
+				<!-- butons -->
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+			
+			</div>
+		
+			<!-- serch // the most inport part of this/actually its the brain/whole side is build around it -->
+			<input type="search" class='form-control w3-margin' id='search_box_input' style="width: 87vw;min-width: 360px;height: 10vh;min-height: 60px;border-radius:8px;margin-left: 3.4% !important" placeholder='Explore'>
+			
+			<!-- buttons on search -->
+			<div id='buttons_on_search_main_container' class='' style="width:18vw;min-width: 185px; height: 4vh;min-height: 71px;position:absolute;bottom:7.4vh;left: 69.9vw;font-size: 45px;">
+				<!-- search icon -->
+				<i class='la la-search' style="display: inline-block"></i>
+				
+				<!-- search control/or extras icon -->
+				<i class='la la-wrench' style="display: inline-block"></i>
+				
+			</div>
+			
+						<!-- menu bar top -->
+			<div id='search_history_bar' style='width:100%;height:5vh;min-height:30px;text-align: center'>
+				<!-- butons -->
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+				<button class='btn' style="width: 17vw;min-width: 100px;height: 100%;"></button>
+			
+			</div> 
+		
+		</div>
+		<!-- show search image -->
+		<img src="images_or_assets/fine_print.svg" style="width: 70px;height: 60px; margin-left: 47%;position: fixed;display: none;" id='menu_bar_show_image' onclick="hide_or_show_header_menu('show')" >
+		
+		<!-- body content// main course -->
+		<div id='main_body_contents_outer_container' class='w3-margin ' style='min-height:568px;min-width: 320px;height:96%' tabindex='-1'>
+		
+			<!--body top spacer, when menu -->
+			<div id='body_top_spacer_when_menu' style="width: 100%;height:25vh;min-height: 180px "></div>
+			<!-- preferential company on first loading //when search porpular products within category/search gets highlights -->
+			<div id='porpular_or_company_highlights_div' style="min-width: 98vw;height:20vh;min-height: 130px;display: flex;"></div>
+			
+			<!-- +++++++++++++++++++++ product show continer +++++++++++++++++++++++++ -->
+			<div id='product_showing_main_container' style="width: 100vw;height: 100vh;display: flex;flex-wrap: wrap;border-top: 1px solid rgba(158,158,158,0.25);text-align: center">
+			
+			
+			
+			</div>
+		
+		
+		
+		</div>
+	
+	
+	
+	
+		<script type="text/javascript" src="script/jquery-3.3.1.min.js"></script><!-- jquery -->
+		<script type="text/javascript" src="script/index.js"></script><!-- app script -->
+	
+	</body>
+
+
+</html>

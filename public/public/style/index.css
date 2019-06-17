@@ -1,0 +1,36 @@
+{border: 1px solid blue;}
+
+body {font-size: 18px;}
+
+.outer_container_width { /* width of outer containers//conteents next to body frame/borders */
+	
+	width: auto;
+	min-width: 320px;
+	border: 1px solid darkgrey;
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px darkgrey,-4px -4px 4px darkgrey;
+}
+
+
+#search_box_input::placeholder{
+	font-size: 35px;
+}
+
+
+
+/* break points 
+
+#buttons_on_search_main_container{//as code name says, it wat it is
+	position:relative;
+	top:-12vh;
+	right: -72vw"
+	font-size: 45px;
+}
+
+
+
+
+
+
+
+*/
